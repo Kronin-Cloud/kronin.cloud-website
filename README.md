@@ -11,8 +11,6 @@ When Ruby & Jekyll installed:
 # clone the project via SSH
 > https://github.com/Kronin-Cloud/kronin.cloud-website.git
 
-# or via HTTPS
-> https://github.com/stask/website-jekyll.git
 
 # install bundler
 > gem install bundler
