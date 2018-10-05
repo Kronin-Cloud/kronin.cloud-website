@@ -1,17 +1,6 @@
 ---
 layout: default
 onepage: true
-works:
-  - path: _works/diff-foods.md
-  - path: _works/sketch-book.md
-  - path: _works/tv-video.md
-    style: wide
-  - path: _works/umbrella-beauty.md
-  - path: _works/amber.md
-  - path: _works/explore.md
-  - path: _works/uro-mag.md
-    style: wide
-  - path: _works/flowers.md
 members:
   - avatar: /assets/images/@stock/member-7.png
     name: Lily Jebari
@@ -82,20 +71,28 @@ testimonials:
       position: 'Designer at Huglab'
 
 clients:
-  - /assets/images/@stock/client-1.png
-  - /assets/images/@stock/client-2.png
-  - /assets/images/@stock/client-3.png
-  - /assets/images/@stock/client-4.png
+  - url: "/assets/images/certifications/CKA.png"
+    name: "CKA"
+  - url: "/assets/images/certifications/CKAD.png"
+    name: "CKAD"
+  - url: "/assets/images/certifications/cehv7.jpg"
+    name: "CEHv7"
+  - url: "/assets/images/certifications/vcp5.png"
+    name: "VCP5"
 
-  - /assets/images/@stock/client-5.png
-  - /assets/images/@stock/client-6.png
-  - /assets/images/@stock/client-7.png
-  - /assets/images/@stock/client-2.png
+  - url: "/assets/images/certifications/ccnp.jpg"
+    name: "CCNP"
+  - url: "/assets/images/certifications/itilv3.jpg"
+    name: "Itilv3"
+  - url: "/assets/images/certifications/ocjp.jpg"
+    name: "OCJP"
+  - url: "/assets/images/certifications/hpuc_cse.jpg"
+    name: "HPUX CSE"
 
-  - /assets/images/@stock/client-3.png
-  - /assets/images/@stock/client-4.png
-  - /assets/images/@stock/client-1.png
-  - /assets/images/@stock/client-6.png
+  - url: "/assets/images/certifications/rhce.jpg"
+    name: "RHCE"
+  - url: "/assets/images/certifications/new_relic.png"
+    name: "New Relic"
 ---
 
 <div class='full no-padding parallax home-video-wrapper'>
@@ -125,7 +122,6 @@ clients:
 
 
 
-<!--about-->
 
 
 
@@ -147,6 +143,97 @@ clients:
     <div class="three spacing"></div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+<!--portfolio-->
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="portfolio-heading">Portfolio</h2>
+                <h3 class="portfolio-subheading ">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="small-4 columns ">
+              <div class="portfolio_block portfolio_open">
+                <div class="portfolio_center">
+                  <h3 class="portfolio_title">Dreams</h3>
+                  <img class="portfolio-img" src="/assets/images/certifications/CKA.png" alt="CKA">
+                  <h3 class="portfolio_name">Dreams</h3>
+                  <div class="portfolio_hover">
+                    <p class="portfolio_hover_icon">
+                      <i class="fa fa-plus fa-3x"></i>
+                    </p>
+                  </div>
+                  <p class="portfolio_paragraph">We have helped multiple clients with Kubernetes based projects:</p>
+                  <ul>
+                    <li>Developed targeted training for the different requirements</li>
+                    <li>Created a framework for applications to be deployed</li>
+                    <li>Reviewed configuration and setup to enhance performance and cost-effectiveness</li>
+                    <li>Migrated multiple application to kubernetes environment</li>
+                    <li>Developed solutions for the inhouse tooling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+
+            <div class="small-4 columns ">
+              <div class="portfolio_block">
+                <a  class="portfolio-link " >
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Dreams</h4>
+                    <p class="text-muted">Website Design</p>
+                </div>
+              </div>
+            </div>
+            <div class="small-4 columns ">
+              <div class="portfolio_block">
+                <a  class="portfolio-link " >
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Dreams</h4>
+                    <p class="text-muted">Website Design</p>
+                </div>
+              </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!--portfolio-->
+
+
+
+
+
+
 
 <!--services-->
 
@@ -242,49 +329,6 @@ clients:
 <!--services-->
 
 
-<a id='works'></a>
-<div class='full'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="take a look" title="What we recently do." %}
-    </div>
-  </div>
-</div>
-<div class='full no-padding' id="demo-1-works">
-  <div class='mod modMasonryGallery'>
-    <ul class='gallery'>
-
-      {% for item in page.works %}
-
-        {% assign work = site.works | where:"path",item.path | first %}
-
-        {% if item.style == 'wide' %}
-          {% assign class = 'wide' %}
-          {% assign width = 1000 %}
-          {% assign height = 350 %}
-        {% else %}
-          {% assign class = '' %}
-          {% assign width = 500 %}
-          {% assign height = 350 %}
-        {% endif %}
-
-        <li class="{{class}}">
-          <a href='{{ work.url | relative_url }}'>
-            <img width="{{width}}" height="{{height}}" alt="" src="{{ work.thumbnail | relative_url }}" />
-            <div class='overlay'>
-              <div class='thumb-info'>
-                <h3>{{ work.title | downcase | capitalize }}</h3>
-                <p>{{ work.categories | join:" & " | escape }}</p>
-              </div>
-            </div>
-          </a>
-        </li>
-
-      {% endfor %}
-
-    </ul>
-  </div>
-</div>
 <div class='full dark no-padding '>
   <div class="four spacing"></div>
   <div class='row'>
@@ -401,7 +445,7 @@ clients:
 <div class='full'>
   <div class='row'>
     <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="we are happy" title="Featured clients" %}
+      {% include section-title.html small_title="we are happy" title="Certifications" %}
     </div>
   </div>
 </div>
@@ -411,7 +455,8 @@ clients:
       {% for client in page.clients %}
         <div class='large-3 medium-6 small-6 columns'>
           <div class="client">
-            <a href="javascript:void(0)"><img alt="" src="{{ client | relative_url }}" /></a>
+            <a href="javascript:void(0)"><img class="clients_img" alt="" src="{{ client.url  }}" /></a>
+            <h3 class="clients_name">{{ client.name }}</h3>
           </div>
         </div>
       {% endfor %}

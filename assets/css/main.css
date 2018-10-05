@@ -5,3 +5,122 @@
   width: 100%;
   text-align: center;
 }
+.clients .columns{
+  float: left!important;
+}
+.clients_img{
+  max-height: 70px;
+  margin: 0 10px;
+}
+.clients_name{
+  margin-top: 15px;
+}
+
+#portfolio{
+  background-color: #f7f7f7;
+  padding: 70px 0;
+}
+.portfolio_block{
+  background-color: white;
+  display: table;
+  width: 100%;
+  position: relative;
+}
+.portfolio-heading{
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+}
+.portfolio-subheading{
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+}
+.portfolio_name{
+    font-weight: 600;
+    font-style: normal;
+    color: #333;
+    text-rendering: optimizeLegibility;
+    margin: 25px 0;
+    text-align: center;
+}
+.portfolio-img{
+  display: table;
+  margin: 25px auto 5px auto;
+  max-height: 120px;
+}
+
+.portfolio_block:hover .portfolio_hover{
+    background: rgba(0, 0, 0, 0.8);
+    transform:  translate(0, 0) scaleY(1);
+    cursor: pointer;
+}
+
+.portfolio_block:hover .portfolio_hover_icon{
+  transform:  rotateX(0) translate(-50%, -50%) scale(1);
+  top: 50%;
+}
+.portfolio_hover_icon, .portfolio_open:hover .portfolio_hover_icon{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform:  rotateX(180deg) translate(-50%, -50%) scale(0.3);
+  font-size: 25px;
+  color: #fed136;
+  transition: 1.3s all;
+}
+.portfolio_hover, .portfolio_open:hover .portfolio_hover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, -50%) scaleY(0);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all;
+
+}
+.portfolio_title{
+    margin: 15px 0;
+    font-size: 34px;
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 25px;
+}
+.portfolio_open{
+  position: fixed;
+  text-align: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999999;
+}
+.portfolio_open .portfolio_name{
+  display: none;
+}
+.portfolio_center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.portfolio_open .portfolio-img{
+  max-height: 170px;
+  margin: 0 auto 5px auto
+}
+.portfolio_paragraph{
+  text-align: left;
+}
+
+
+
+
+@media only screen and (min-width: 500px) {
+  .clients_img{
+    height: 45px;
+    margin: 0 10px;
+  }
+}
