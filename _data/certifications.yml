@@ -1,0 +1,23 @@
+clients:
+  - url: "/assets/images/certifications/CKA.png"
+    name: "CKA"
+  - url: "/assets/images/certifications/CKAD.png"
+    name: "CKAD"
+  - url: "/assets/images/certifications/cehv7.jpg"
+    name: "CEHv7"
+  - url: "/assets/images/certifications/vcp5.png"
+    name: "VCP5"
+
+  - url: "/assets/images/certifications/ccnp.jpg"
+    name: "CCNP"
+  - url: "/assets/images/certifications/itilv3.jpg"
+    name: "Itilv3"
+  - url: "/assets/images/certifications/ocjp.jpg"
+    name: "OCJP"
+  - url: "/assets/images/certifications/hpuc_cse.jpg"
+    name: "HPUX CSE"
+
+  - url: "/assets/images/certifications/rhce.jpg"
+    name: "RHCE"
+  - url: "/assets/images/certifications/new_relic.png"
+    name: "New Relic"

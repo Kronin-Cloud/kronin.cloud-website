@@ -1,0 +1,26 @@
+
+cont:
+  - title: "Dreams"
+    img-src: "/assets/images/certifications/CKA.png"
+    alt: "CKA"
+    paragraph: "We have helped multiple clients with Kubernetes based projects:"
+    list:
+      - text: "Developed targeted training for the different requirements"
+      - text: "Created a framework for applications to be deployed"
+      - text: "Reviewed configuration and setup to enhance performance and cost-effectiveness"
+      - text: "Migrated multiple application to kubernetes environment"
+      - text: "Developed solutions for the inhouse tooling"
+  - title: "VMware"
+    img-src: "/assets/images/certifications/VMware.jpg"
+    alt: "VMware"
+    paragraph: "Projects we contributed to:"
+    list:
+      - text: "Migrated Bare metal applications to VMware environment"
+      - text: "Developed custom tools for operation teams"
+      - text: "Automated processes for clients"
+      - text: "Improved on deployment pipelines/ deployment times"
+  - title: "Prometheus"
+    img-src: "/assets/images/certifications/Prometheus.png"
+    alt: "Prometheus"
+    paragraph: "We are digging deeper in prometheus to develop better tooling for some of our clients
+More updates to come"

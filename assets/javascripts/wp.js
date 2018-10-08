@@ -56,4 +56,16 @@
 
   });
 
+  $(".portfolio_close").click(function () {
+    $(this).parent().removeClass('portfolio_open');
+    $( "body" ).css("overflow","visible");
+  });
+
+    $(".portfolio_hover").click(function () {
+      $(this).parent().parent().addClass('portfolio_open');
+      $( "body" ).css("overflow","hidden");
+
+      // console.log("$(this).addClass('portfolio_open')");
+    });
+
 })(jQuery)

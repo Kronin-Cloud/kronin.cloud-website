@@ -1,98 +1,8 @@
 ---
 layout: default
 onepage: true
-members:
-  - avatar: /assets/images/@stock/member-7.png
-    name: Lily Jebari
-    position: Founder
-    socials:
-      - link: http://twitter.com
-        icon: twitter
-      - link: http://facebook.com
-        icon: facebook
-    desc:
-      "As the founder and CEO of Wrap, and as an interactions and visual design specialist, she knows that user- centred and easy-to-use design is an essential way to distinguish a good product and an awesome product."
-  - avatar: /assets/images/@stock/member-9.png
-    name: Mark Wayne
-    position: Creative Director
-    socials:
-      - link: http://twitter.com
-        icon: twitter
-      - link: http://facebook.com
-        icon: facebook
-      - link: http://dribbble.com
-        icon: dribbble
-    desc:
-      "Mark started designing web sites back in 1992. Since then, he has worked for a wide range of digital agencies in the UK and America. At Wrap, Mark’s role means solving all kinds of visual design problems."
-  - avatar: /assets/images/@stock/member-8.png
-    name: Clare Watson
-    position: Front-end Developer
-    socials:
-      - link: http://twitter.com
-        icon: twitter
-      - link: http://facebook.com
-        icon: facebook
-      - link: http://tumblr.com
-        icon: tumblr
-    desc:
-      "Clare is a senior front-end developer here at Wrap, specialises in building blocks of the web: HTML, CSS, and JavaScript. She has almost ten years experiencs in the front-end development."
-  - avatar: /assets/images/@stock/member-4-4.png
-    name: Jone Bucan
-    position: Senior Designer
-    socials:
-      - link: http://twitter.com
-        icon: twitter
-      - link: http://facebook.com
-        icon: facebook
-    desc:
-      "Jone started designing web sites back in 1992. Since then, he has worked for a wide range of digital agencies in the UK and America. At Wrap, Jone’s role means solving all kinds of visual design problems."
 
-team_slides:
-  - /assets/images/@stock/slide-full-1.jpg
-  - /assets/images/@stock/slide-full-8.jpg
-  - /assets/images/@stock/slide-full-11.jpg
-  - /assets/images/@stock/slide-full-10.jpg
 
-testimonials:
-  - quote: "Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est."
-    author:
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-1.png'
-      position: 'Designer at Huglab'
-  - quote: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat consectetuer sit amet magna adipiscing."
-    author:
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-2.png'
-      position: 'Designer at Huglab'
-  - quote: "Reprehenderit eos et non et ut eum reprehenderit quis sequi quia vel repellendus id. Velit quit blanditiis dolor quam error eos dolores sequi eaque rerum est."
-    author:
-      name: "David White"
-      avatar: '/assets/images/@stock/author-avatar-3.png'
-      position: 'Designer at Huglab'
-
-clients:
-  - url: "/assets/images/certifications/CKA.png"
-    name: "CKA"
-  - url: "/assets/images/certifications/CKAD.png"
-    name: "CKAD"
-  - url: "/assets/images/certifications/cehv7.jpg"
-    name: "CEHv7"
-  - url: "/assets/images/certifications/vcp5.png"
-    name: "VCP5"
-
-  - url: "/assets/images/certifications/ccnp.jpg"
-    name: "CCNP"
-  - url: "/assets/images/certifications/itilv3.jpg"
-    name: "Itilv3"
-  - url: "/assets/images/certifications/ocjp.jpg"
-    name: "OCJP"
-  - url: "/assets/images/certifications/hpuc_cse.jpg"
-    name: "HPUX CSE"
-
-  - url: "/assets/images/certifications/rhce.jpg"
-    name: "RHCE"
-  - url: "/assets/images/certifications/new_relic.png"
-    name: "New Relic"
 ---
 
 <div class='full no-padding parallax home-video-wrapper'>
@@ -120,12 +30,6 @@ clients:
 
 <!--about-->
 
-
-
-
-
-
-
 <div class="full no-overflow no-padding parallax" style="background-image: url({{ "/assets/images/@stock/about-1.jpg" | relative_url }})">
   <div class="right-half">
     <div class="two spacing"></div>
@@ -145,13 +49,6 @@ clients:
 </div>
 
 
-
-
-
-
-
-
-
 <!--portfolio-->
 <section id="portfolio" class="bg-light-gray">
     <div class="container">
@@ -163,66 +60,33 @@ clients:
         </div>
         <div class="row">
 
+          {% for prt in site.data.portfolio.cont %}
             <div class="small-4 columns ">
-              <div class="portfolio_block portfolio_open">
+              <div class="portfolio_block ">
+                <a class="portfolio_close"><i class="fa fa-times" aria-hidden="true"></i></a>
                 <div class="portfolio_center">
-                  <h3 class="portfolio_title">Dreams</h3>
-                  <img class="portfolio-img" src="/assets/images/certifications/CKA.png" alt="CKA">
-                  <h3 class="portfolio_name">Dreams</h3>
+                  <h3 class="portfolio_title">{{ prt.title }}</h3>
+                  <img class="portfolio-img" src="{{ prt.img-src }}" alt="{{ prt.alt }}">
+                  <h3 class="portfolio_name">{{ prt.title }}</h3>
                   <div class="portfolio_hover">
                     <p class="portfolio_hover_icon">
                       <i class="fa fa-plus fa-3x"></i>
                     </p>
                   </div>
-                  <p class="portfolio_paragraph">We have helped multiple clients with Kubernetes based projects:</p>
-                  <ul>
-                    <li>Developed targeted training for the different requirements</li>
-                    <li>Created a framework for applications to be deployed</li>
-                    <li>Reviewed configuration and setup to enhance performance and cost-effectiveness</li>
-                    <li>Migrated multiple application to kubernetes environment</li>
-                    <li>Developed solutions for the inhouse tooling</li>
+                  <p class="portfolio_paragraph
+                  {% if prt.list %} portfolio_paragraph-center {% endif %}
+                  ">{{ prt.paragraph }}</p>
+                    {% if prt.list %}
+                  <ul class="portfolio_list">
+                    {% for list in prt.list %}
+                    <li>{{ list.text }}</li>
+                    {% endfor %}
                   </ul>
+                    {% endif %}
                 </div>
               </div>
             </div>
-
-
-
-
-            <div class="small-4 columns ">
-              <div class="portfolio_block">
-                <a  class="portfolio-link " >
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Dreams</h4>
-                    <p class="text-muted">Website Design</p>
-                </div>
-              </div>
-            </div>
-            <div class="small-4 columns ">
-              <div class="portfolio_block">
-                <a  class="portfolio-link " >
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-
-                </a>
-                <div class="portfolio-caption">
-                    <h4>Dreams</h4>
-                    <p class="text-muted">Website Design</p>
-                </div>
-              </div>
-            </div>
-
-
+          {% endfor %}
 
         </div>
     </div>
@@ -230,102 +94,24 @@ clients:
 <!--portfolio-->
 
 
-
-
-
-
-
 <!--services-->
-
-<section class="services">
+<section class="services" id="services">
   <h2 class="services_title">Services</h2>
   <h3 class="services_subtitle ">Lorem ipsum dolor sit amet consectetur.</h3>
-
   <div class="members">
-
+      {% for serv in site.data.services.cont %}
       <div class="small-3 columns">
         <div class="member-avatar">
           <span class="services_icon">
-              <i class="fa fa-twitter"></i>
+              <i class="{{ serv.icon }}"></i>
           </span>
-          <h4 class="services_columns_heading">Best Practices</h4>
-          <p class="services_columns_text">Shows you best practices in cloud implementations that are relevant to you.</p>
+          <h4 class="services_columns_heading">{{ serv.heading }}</h4>
+          <p class="services_columns_text">{{ serv.text }}</p>
         </div>
       </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Cost Savings</h4>
-          <p class="services_columns_text">Identify specific savings and benefits the cloud will bring to your business.</p>
-        </div>
-      </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Cloud Ready Candidates</h4>
-          <p class="services_columns_text">Identify services and applications that can cost-effectively move to the cloud to reduce the On-Premise software burden on your infrastructure.</p>
-        </div>
-      </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Risk Factors</h4>
-          <p class="services_columns_text">We’ll indicate the risks and what can be done to minimize them, and address concerns surrounding security, scalability and accessibility.<br>
-          Implementation Strategy: Outlines a custom implementation roadmap and impact on your legacy applications.</p>
-        </div>
-      </div>
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Monitoring</h4>
-          <p class="services_columns_text">We offer full-stack monitoring services that helps organizations manage and optimize the applications and other IT infrastructure hosted on the cloud.</p>
-        </div>
-      </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Seamless integration</h4>
-          <p class="services_columns_text">Seamless integration – we can provide both ‘Cloud to Cloud’ and ‘Cloud to Ground’ integration, to both new and legacy systems. Our effective back-end integration provides you with a single, real-time view of your customers and products. We can also manage the successful migration of your data.</p>
-        </div>
-      </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Cloud security</h4>
-          <p class="services_columns_text">Cloud security duties including design, planning, management, maintenance and support. Identify and work through cloud security issues such as authentication, APIs, system vulnerabilities, web services, DoS attacks, and multi-tenant risk.</p>
-        </div>
-      </div>
-
-      <div class="small-3 columns">
-        <div class="member-avatar">
-          <span class="services_icon">
-              <i class="fa fa-twitter"></i>
-          </span>
-          <h4 class="services_columns_heading">Training</h4>
-          <p class="services_columns_text">Microservices, Cloud native applications, Containers, Kubernetes are what most organizations are thinking about these days. Cloud Native Computing Foundation is assembling projects that help with building cloud native applications. We can give training on kubernetes, aws or most of the cloud solutions.</p>
-        </div>
-      </div>
-
+      {% endfor %}
   </div>
 </section>
-
 <!--services-->
 
 
@@ -348,101 +134,13 @@ clients:
 </div>
 
 
-<a id='team'></a>
-<div class='full dark-grey'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="The team" title="Hello! This is us." %}
-    </div>
-  </div>
-</div>
-<div class="full dark-grey no-padding">
-  <div class="members">
-    {% for member in page.members %}
-      <div class="small-3 columns">
-        <div class='member-avatar'>
-          <img class="avatar" alt="" src="{{ member.avatar | relative_url }}" />
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-<div class="full no-padding team-bg">
-  <div class="div member-decs">
-    {% for member in page.members %}
-      <div class="large-3 columns">
-        <div class='member-dec'>
-          <div class='intro'>
-            <h3>{{ member.name | escape }}</h3>
-            <h4>{{ member.position | escape }}</h4>
-            <p>{{ member.desc | escape }}</p>
-            <ul class='socials'>
-              {% for social in member.socials %}
-                <li>
-                  <a href='{{ social.link }}'>
-                    <i class='fa fa-{{ social.icon }}'></i>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="four spacing"></div>
-</div>
-<div class="full no-padding">
-  <div class='mod modBoxedSlider' data-timeout='1500'>
-    <div class='slides'>
-      {% for image in page.team_slides %}
-        <div class='slide'>
-          <img width="1200" height="800" alt="" src="{{ image | relative_url }}" />
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+
+
+  <!-- {% include slider.html  %} -->
 
 
 
-
-<div class='full no-overflow no-padding parallax' style="background-image: url({{ "/assets/images/@stock/customers-bg.jpg" | relative_url }})">
-  <div class="left-half">
-    <div class="two spacing"></div>
-    <div class="row">
-      <div class="section-header alt white">
-        <h2>What our clients say</h2>
-      </div>
-      <div class='mod modTestimonials simple'>
-        <div class='row'>
-          <div class='small-12 columns'>
-            <div class='items'>
-              {% for t in page.testimonials %}
-                <div class='item'>
-                  <p class='quote'>{{ t.quote }}</p>
-                  <div class="two spacing"></div>
-                  <div class='author'>
-                    <p class='author-avatar'>
-                      <img width="80" height="80" alt="" src="{{ t.author.avatar | relative_url }}" />
-                    </p>
-                    <p class='author-name'>
-                      -
-                      <strong>{{ t.author.name }}</strong>
-                      {%- if t.author.position %}, {{ t.author.position }}{% endif %}
-                    </p>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class='full'>
+<div class='full' id="certifications">
   <div class='row'>
     <div class='large-8 columns large-centered'>
       {% include section-title.html small_title="we are happy" title="Certifications" %}
@@ -452,7 +150,7 @@ clients:
 <div class="full no-padding">
   <div class="clients">
     <div class='row'>
-      {% for client in page.clients %}
+      {% for client in site.data.certifications.clients %}
         <div class='large-3 medium-6 small-6 columns'>
           <div class="client">
             <a href="javascript:void(0)"><img class="clients_img" alt="" src="{{ client.url  }}" /></a>
