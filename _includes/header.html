@@ -20,6 +20,7 @@
         <i class="fa fa-bars"></i>
         Menu
       </a>
+      <div class="identity-login-link" data-netlify-identity-button></div>
     </div>
     <section class='top-bar-section closed'>
       <ul class='right'>
@@ -30,12 +31,12 @@
 
             {% if first != '#' %}
               {% assign href = item.path | relative_url %}
-            {% elsif page.onepage %}          
+            {% elsif page.onepage %}
               {% assign href = item.path %}
-            {% else %}              
-              {% assign href = 'index.html' | append:item.path | relative_url %}              
+            {% else %}
+              {% assign href = 'index.html' | append:item.path | relative_url %}
             {% endif %}
-            
+
             <a href="{{ href }}">{{ item.name }}</a>
           </li>
         {% endfor %}
