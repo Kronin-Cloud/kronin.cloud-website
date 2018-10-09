@@ -32,7 +32,8 @@ markdown: kramdown
 # theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+
+
 
 sass:
   load_paths:
@@ -40,7 +41,7 @@ sass:
 
 incremental: true
 
-exclude: ['gulpfile.js', 'Gemfile', 'Gemfile.lock']
+exclude: [ 'README.md', 'Gemfile', 'Gemfile.lock']
 
 collections:
   works:
@@ -49,13 +50,10 @@ collections:
 
 defaults:
   - scope:
-      path: ""
       type: works
     values:
       layout: work
 
-paginate: 4
-paginate_path: "/blog/page/:num"
 
 # This is the place to set up the commenting system
 # disqus:
