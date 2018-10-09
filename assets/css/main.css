@@ -155,7 +155,9 @@
 #portfolio .small-4{
   margin: 1.07143rem auto;
 }
-
+.identity-login-link{
+  float: left;
+}
 @media only screen and (max-width: 767px) {
   .portfolio_open .portfolio_center{
     position: relative;
