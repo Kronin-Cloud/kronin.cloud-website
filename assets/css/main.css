@@ -198,12 +198,13 @@
   background: rgb(0, 172, 237)!important;
 }
 .button{
-  background-color: rgb(0, 172, 237)!important;
+  background-color: transparent!important;
+  color: rgb(0, 172, 237)!important;
   border: 2px solid rgb(0, 172, 237)!important;
 }
 .button:hover{
-  background-color: transparent!important;
-  color: rgb(0, 172, 237)!important;
+  background-color: rgb(0, 172, 237)!important;
+  color: white!important;
 }
 
 p.small-title, .thin a, .portfolio_hover_icon{
@@ -270,6 +271,24 @@ p.small-title, .thin a, .portfolio_hover_icon{
 .columns{
   z-index: 3;
 }
+.logo{
+  width: 100px!important;
+
+}
+
+.netlify-identity-button{
+  color: rgb(0, 172, 237)!important;
+}
+.identity-login-link{
+    margin-top: 5px;
+}
+.shrink .logo{
+  width: 74px!important;
+}
+.shrink .identity-login-link{
+  margin-top: 2px;
+}
+
 
 @media only screen and (max-width: 767px) {
   .portfolio_open .portfolio_center{
