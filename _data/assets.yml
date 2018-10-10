@@ -9,6 +9,7 @@ css:
   - https://fonts.googleapis.com/css?family=Raleway:400,700,300
 js:
   - /bower_components/jquery/dist/jquery.js
+  - /assets/javascripts/main.js
   - /bower_components/imagesloaded/imagesloaded.pkgd.js
   - /bower_components/masonry/dist/masonry.pkgd.min.js
   - /bower_components/foundation/js/foundation.min.js

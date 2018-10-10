@@ -174,10 +174,20 @@
   background: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 70.71%);
 }
 .my-about:after{
-      /* background: linear-gradient(90deg, rgba(45, 67, 98, .8), rgba(255, 255, 255, .2), rgba(0, 0, 0, 0.3) 70.71%); */
-      background: linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 50.71%);
+    /* background: linear-gradient(90deg, rgba(45, 67, 98, .8), rgba(255, 255, 255, .2), rgba(0, 0, 0, 0.3) 70.71%); */
+    background: linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, 0) 50.71%);
 }
-
+.right-half{
+  z-index: 99;
+}
+.top-bar{
+  z-index: 9999;
+}
+.boxed{
+  padding-left: 35px!important;
+  padding-right: 35px!important;
+  transition: 0.7s all;
+}
 @media only screen and (max-width: 767px) {
   .portfolio_open .portfolio_center{
     position: relative;
