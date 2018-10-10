@@ -269,14 +269,11 @@ p.small-title, .thin a, .portfolio_hover_icon{
   width: 60%;
   margin-bottom: 20px;
 }
-.columns{
-  /* z-index: 3; */
-}
+
 .logo{
   width: 100px!important;
   margin-left: 15px;
 }
-
 .netlify-identity-button{
   color: rgb(0, 172, 237)!important;
 }
