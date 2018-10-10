@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+	 viewBox="0 0 33 26" style="enable-background:new 0 0 33 26;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#F8CA3D;}
-	.st1{fill:#FFFFFF;}
+		.st0{fill:rgb(0, 172, 237);}
 </style>
-<circle class="st0" cx="25" cy="25" r="25"/>
 <g>
-	<path class="st1" d="M36,31.6v-4.3h-1.6v3.4c0,0.5-0.4,1-1,1H13.9c-0.5,0-1-0.4-1-1V19c0-0.5,0.4-1,1-1h11.2v-1H12.4
-		c-0.6,0-1.1,0.5-1.1,1.1v14.6l-2.8,3.4c0,0.9,0.8,1.7,1.7,1.7h27c0.9,0,1.7-0.8,1.7-1.7L36,32.8V31.6z M25.9,37.3h-4.5
-		c-0.2,0-0.3-0.1-0.3-0.3s0.1-0.3,0.3-0.3h4.5c0.2,0,0.3,0.1,0.3,0.3C26.2,37.1,26.1,37.3,25.9,37.3L25.9,37.3z M19,36.1l0.9-1h7.6
-		l0.9,1H19z"/>
-	<rect x="21.8" y="25.3" class="st1" width="2.3" height="2.3"/>
-	<rect x="23.3" y="22.1" class="st1" width="2.3" height="2.3"/>
-	<rect x="25.6" y="25" class="st1" width="2.3" height="2.3"/>
-	<rect x="27.5" y="21.1" class="st1" width="2.8" height="2.8"/>
-	<rect x="31.4" y="12.6" class="st1" width="2.8" height="2.8"/>
-	<rect x="26.4" y="17.6" class="st1" width="2.8" height="2.8"/>
-	<rect x="30.7" y="16.4" class="st1" width="4" height="4"/>
-	<rect x="33.7" y="21.2" class="st1" width="4.8" height="4.8"/>
-	<rect x="35.5" y="12.2" class="st1" width="6" height="6"/>
-	<rect x="30" y="24.2" class="st1" width="2.8" height="2.8"/>
+	<path class="st0" d="M27.5,19.7v-4.4h-1.6v3.5c0,0.5-0.4,1-1,1H5.4c-0.5,0-1-0.4-1-1V6.9c0-0.5,0.4-1,1-1h11.2v-1H3.9
+		C3.3,4.9,2.8,5.4,2.8,6v14.8L0,24.3C0,25.2,0.8,26,1.7,26h27c0.9,0,1.7-0.8,1.7-1.7l-2.9-3.4V19.7z M17.4,25.5h-4.5
+		c-0.2,0-0.3-0.1-0.3-0.3c0-0.2,0.1-0.3,0.3-0.3h4.5c0.2,0,0.3,0.1,0.3,0.3C17.7,25.3,17.6,25.5,17.4,25.5L17.4,25.5z M10.5,24.3
+		l0.9-1H19l0.9,1H10.5z"/>
+	<rect x="13.3" y="13.3" class="st0" width="2.3" height="2.3"/>
+	<rect x="14.8" y="10.1" class="st0" width="2.3" height="2.3"/>
+	<rect x="17.1" y="13" class="st0" width="2.3" height="2.3"/>
+	<rect x="19" y="9" class="st0" width="2.8" height="2.8"/>
+	<rect x="22.9" y="0.4" class="st0" width="2.8" height="2.8"/>
+	<rect x="17.9" y="5.5" class="st0" width="2.8" height="2.8"/>
+	<rect x="22.2" y="4.3" class="st0" width="4" height="4.1"/>
+	<rect x="25.2" y="9.1" class="st0" width="4.8" height="4.9"/>
+	<rect x="27" class="st0" width="6" height="6.1"/>
+	<rect x="21.5" y="12.2" class="st0" width="2.8" height="2.8"/>
 </g>
 </svg>

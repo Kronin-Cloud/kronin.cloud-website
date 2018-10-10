@@ -1,79 +1,20 @@
 <div class='full parallax social-networks my-social' style="background-image: url({{ "/assets/images/4000x2670.jpg" | relative_url }})">
   <div class='two spacing'></div>
   <div class='row'>
+
+    {% for soc in site.data.social-network.cont %}
     <div class='medium-3 columns'>
       <div class='big-social'>
-        <a href='https://www.facebook.com/kronin.cloud'>
-          <i class='fa fa-facebook'></i>
+        <a href='{{ soc.link }}'>
+          <span>
+            <i class='fa {{ soc.icon }}'></i>
+          </span>
         </a>
-        <h4>Facebook</h4>
-        <p>Connect us with facebook</p>
+        <h4>{{ soc.social }}</h4>
       </div>
       <div class='two spacing'></div>
     </div>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://twitter.com/KroninC'>
-          <i class='fa fa-twitter'></i>
-        </a>
-        <h4>Twitter</h4>
-        <p>Follow our tweets</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://www.linkedin.com/company/kronin-cloud/'>
-          <i class='fa fa-linkedin'></i>
-        </a>
-        <h4>Linkedin</h4>
-        <p>Share some latest works</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://github.com/orgs/Kronin-Cloud'>
-          <i class='fa fa-github'></i>
-        </a>
-        <h4>Github</h4>
-        <p>View some new trends</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
-    <div class='two spacing'></div>
-</div>
-  <div class='row'>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://kronincloud.slack.com/'>
-          <i class='fa fa-slack'></i>
-        </a>
-        <h4>Slack</h4>
-        <p>View some new trends</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://www.youtube.com/channel/UCtCGskDgeS3M5ArBN1uaBGg'>
-          <i class='fa fa-youtube'></i>
-        </a>
-        <h4>YouTube</h4>
-        <p>View some new trends</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
-    <div class='medium-3 columns'>
-      <div class='big-social'>
-        <a href='https://goo.gl/maps/H3KyCuSwsK42'>
-          <i class='fa fa-google'></i>
-        </a>
-        <h4>Google</h4>
-        <p>View some new trends</p>
-      </div>
-      <div class='two spacing'></div>
-    </div>
+    {% endfor %}
 
   <div class='two spacing'></div>
 </div>
