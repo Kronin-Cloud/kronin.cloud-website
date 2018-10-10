@@ -192,6 +192,7 @@
 }
 .services_icon{
     background-color: transparent;
+    border: 3px solid rgb(0, 172, 237)!important;
 }
 .section-header h2::after, .section-header h3::after, .fullscreen .layer h1::after,
 .section-title p.small-title::after{
@@ -269,11 +270,11 @@ p.small-title, .thin a, .portfolio_hover_icon{
   margin-bottom: 20px;
 }
 .columns{
-  z-index: 3;
+  /* z-index: 3; */
 }
 .logo{
   width: 100px!important;
-
+  margin-left: 15px;
 }
 
 .netlify-identity-button{
@@ -283,12 +284,15 @@ p.small-title, .thin a, .portfolio_hover_icon{
     margin-top: 5px;
 }
 .shrink .logo{
-  width: 74px!important;
+  width: 75px!important;
+  margin-top: 5px;
 }
 .shrink .identity-login-link{
-  margin-top: 2px;
+  /* margin-top: 2px; */
 }
-
+.right li a:hover{
+  color: rgb(0, 172, 237)!important;
+}
 
 @media only screen and (max-width: 767px) {
   .portfolio_open .portfolio_center{
