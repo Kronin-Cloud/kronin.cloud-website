@@ -1,47 +1,6 @@
-<a id='team'></a>
-<div class='full dark-grey'>
-  <div class='row'>
-    <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="The team" title="Hello! This is us." %}
-    </div>
-  </div>
-</div>
-<div class="full dark-grey no-padding">
-  <div class="members">
-    {% for member in site.data.slider.members %}
-      <div class="small-3 columns">
-        <div class='member-avatar'>
-          <img class="avatar" alt="" src="{{ member.avatar | relative_url }}" />
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-<div class="full no-padding team-bg">
-  <div class="div member-decs">
-    {% for member in site.data.slider.members %}
-      <div class="large-3 columns">
-        <div class='member-dec'>
-          <div class='intro'>
-            <h3>{{ member.name | escape }}</h3>
-            <h4>{{ member.position | escape }}</h4>
-            <p>{{ member.desc | escape }}</p>
-            <ul class='socials'>
-              {% for social in member.socials %}
-                <li>
-                  <a href='{{ social.link }}'>
-                    <i class='fa fa-{{ social.icon }}'></i>
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-        </div>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="four spacing"></div>
-</div>
+
+<!-- {% include team.html  %} -->
+
 <div class="full no-padding">
   <div class='mod modBoxedSlider' data-timeout='1500'>
     <div class='slides'>
