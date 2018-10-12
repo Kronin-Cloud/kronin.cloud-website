@@ -15,6 +15,8 @@ When Ruby & Jekyll installed:
 # install bundler
 > gem install bundler
 
+# install Gemfile
+> bundler init
 # install dependencies
 > bundle install
 

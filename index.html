@@ -14,14 +14,15 @@ onepage: true
     <div class='layer'>
       <p class="small-title">Make the right choice </p>
       <h1 class='thin' id="to-be-update">
-         <span class="fir">Too fast</span><br/>
-         <span class="sec">Too wild</span><br/>
-         <span class="thir">Too different</span>
+         <span class="fir">We listen</span><br/>
+         <span class="sec">We adapt</span><br/>
+         <span class="thir">We implement</span>
       </h1>
-      <h2 class='thin'>
+      <img src="{{ site.baseurl }}/assets/images/tab.png" alt="">
+      <!-- <h2 class='thin'>
        This is wrap, a creative digital company, creating solutions for any visual identity project, espetically for digital experiences and brand identities.
        {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a>
+       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a> -->
       </h2>
     </div>
   </div>
@@ -54,8 +55,8 @@ onepage: true
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="portfolio-heading">Portfolio</h2>
-                <h3 class="portfolio-subheading ">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h2 class="portfolio-heading">Kubernetes</h2>
+                <!-- <h3 class="portfolio-subheading ">Lorem ipsum dolor sit amet consectetur.</h3> -->
             </div>
         </div>
         <div class="row">
@@ -97,7 +98,7 @@ onepage: true
 <!--services-->
 <section class="services" id="services">
   <h2 class="services_title">Services</h2>
-  <h3 class="services_subtitle ">Lorem ipsum dolor sit amet consectetur.</h3>
+  <!-- <h3 class="services_subtitle ">Lorem ipsum dolor sit amet consectetur.</h3> -->
   <div class="members">
       {% for serv in site.data.services.cont %}
       <div class="small-3 columns">
@@ -143,7 +144,7 @@ onepage: true
 <div class='full' id="certifications">
   <div class='row'>
     <div class='large-8 columns large-centered'>
-      {% include section-title.html small_title="we are happy" title="Certifications" %}
+      {% include section-title.html  title="Certifications" %}
     </div>
   </div>
 </div>
@@ -156,6 +157,7 @@ onepage: true
             <a href="javascript:void(0)"><img class="clients_img" alt="" src="{{ site.baseurl }}{{ client.url  }}" /></a>
             <h3 class="clients_name">{{ client.name }}</h3>
           </div>
+
         </div>
       {% endfor %}
     </div>
