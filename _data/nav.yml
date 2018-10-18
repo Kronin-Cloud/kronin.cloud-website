@@ -14,8 +14,8 @@
   path: "#certifications"
   section_id: certifications
 - name: Blog
-  path: /blog/
-  section_id: blog
+  path: "https://blog.kronin.cloud/"
+  section_id: https://blog.kronin.cloud/
 - name: Contact
   path: "#contact"
   section_id: contact
