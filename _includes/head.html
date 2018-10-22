@@ -15,19 +15,23 @@
     {% include google-analytics.html %}
   {% endif %}
 
+  <!--<noscript>-->
+
+      <!--{% for path in site.data.assets.css %}-->
+
+        <!--{%- if path contains '://' -%}-->
+          <!--{%- assign href = path -%}-->
+        <!--{%- else -%}-->
+          <!--{%- assign href = path | relative_url -%}-->
+        <!--{%- endif -%}-->
+
+        <!--<link rel="stylesheet" href="{{ href }}">-->
+      <!--{% endfor %}-->
+
+
+  <!--</noscript>-->
+
   <noscript>
-
-      {% for path in site.data.assets.css %}
-
-        {%- if path contains '://' -%}
-          {%- assign href = path -%}
-        {%- else -%}
-          {%- assign href = path | relative_url -%}
-        {%- endif -%}
-
-        <link rel="stylesheet" href="{{ href }}">
-      {% endfor %}
-
-
+    <link rel="stylesheet" href="assets/vendors/main.css">
   </noscript>
 </head>
