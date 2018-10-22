@@ -29,8 +29,7 @@ function loadCSS(hf) {
   {%- endif -%}
   loadCSS("{{ href }}");
 {% endfor %}
-  loadCSS("{{ page.url | replace:'index.html','' | absolute_url }}");
-  loadCSS("{{ "/feed.xml" | relative_url }}");
+
 
 </script>
 
