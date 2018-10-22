@@ -14,7 +14,6 @@ js:
   - /bower_components/masonry/dist/masonry.pkgd.min.js
   - /bower_components/foundation/js/foundation.min.js
   - /assets/javascripts/jquery.sequence-min.js
-  - /assets/javascripts/slick.patched.js
   - /assets/javascripts/jquery.countTo.js
   - /assets/javascripts/jquery.appear.js
   - /assets/javascripts/jquery.validate.js

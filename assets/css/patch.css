@@ -41,20 +41,16 @@ form.search-form .screen-reader-text {
 /*.post.sticky h2 a {
   color: #333;
 }
-
 .post.sticky .info a {
   color: #fff;
 }
-
 .post.sticky .button {
   background: #333;
   border: 2px solid #333;
 }
-
 .post.sticky .featured-post {
   display: none;
 }
-
 .post.sticky p.info {
   color: #666;
 }*/
@@ -219,11 +215,11 @@ body.posts .modBlogPost.big p {
   height: 1px;
   width: 35px;
   background: #edb713;
-  margin: 10px 0 30px; 
+  margin: 10px 0 30px;
 }
 
 .modBlogPost.big h3.deco::after {
-   width: 60px; 
+   width: 60px;
  }
 
 .post.sticky.modBlogPost.big .info {
