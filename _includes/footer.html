@@ -15,20 +15,24 @@
 function loadCSS(hf) {
     var ms = document.createElement("link");
     ms.rel = "stylesheet";
-    ms.href = hf;
+    ms.href = "https://fonts.googleapis.com/css?family=Raleway:400,700,300";
     document.getElementsByTagName("head")[0].appendChild(ms);
 }
 
 
-{% for path in site.data.assets.css %}
 
-  {%- if path contains '://' -%}
-    {%- assign href = path -%}
-  {%- else -%}
-    {%- assign href = path | relative_url -%}
-  {%- endif -%}
-  loadCSS("{{ href }}");
-{% endfor %}
+
+
+</script>
+
+<script>
+
+    function loadCSS(hf) {
+        var ms = document.createElement("link");
+        ms.rel = "stylesheet";
+        ms.href = "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+        document.getElementsByTagName("head")[0].appendChild(ms);
+    }
 
 
 </script>

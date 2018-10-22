@@ -1,12 +1,12 @@
 css:
-  - /assets/css/foundation.css
-#  - /assets/css/style.css
-  - /assets/css/patch.css
-  - /assets/css/fontello.css
-#  - /assets/css/main.css
-  - /assets/css/font-awesome.css
-  - https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700
-  - https://fonts.googleapis.com/css?family=Raleway:400,700,300
+#  - /assets/css/foundation.css
+##  - /assets/css/style.css
+#  - /assets/css/patch.css
+#  - /assets/css/fontello.css
+##  - /assets/css/main.css
+#  - /assets/css/font-awesome.css
+#  - https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700
+#  - https://fonts.googleapis.com/css?family=Raleway:400,700,300
 js:
   - /bower_components/jquery/dist/jquery.min.js
   - /assets/javascripts/main.js
