@@ -1,13 +1,13 @@
 ---
 layout: default
 onepage: true
-
 ---
 
 <div class='full no-padding parallax home-video-wrapper' id="top">
   <div class='fullscreen'>
-    <video autoplay='autoplay' id='fullscreen-video' loop='loop'>
+    <video autoplay='autoplay' id='fullscreen-video' loop='loop' >
       <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
+      <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mov" | relative_url }}' type='video/mov'>
     </video>
     <div class='overlay'></div>
     <div class='layer'>
@@ -17,12 +17,6 @@ onepage: true
          <span class="sec">We adapt</span><br/>
          <span class="thir">We implement</span>
       </h1>
-
-      <!-- <h2 class='thin'>
-       This is wrap, a creative digital company, creating solutions for any visual identity project, espetically for digital experiences and brand identities.
-       {% assign nav_obj = site.data.nav | where:'section_id','works' | first %}
-       <a href='{{ "index.html" | append:nav_obj.path | relative_url }}'>View our works</a> -->
-      </h2>
     </div>
   </div>
 </div>
@@ -112,33 +106,6 @@ onepage: true
       {% endfor %}
   </div>
 </section>
-<!--services-->
-
-<!--
-<div class='full dark no-padding '>
-  <div class="four spacing"></div>
-  <div class='row'>
-    <div class='large-8 columns'>
-      <h3 class="white">Customized to meet your needs.</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur inventore minimar.
-      </p>
-    </div>
-    <div class='large-4 columns'>
-      <p>
-        <a class='button small boxed' href='#certifications'>More</a>
-      </p>
-    </div>
-  </div>
-  <div class='two spacing'></div>
-</div> -->
-
-
-
-
-
-
-
 
 <div class='full' id="certifications">
   <div class='row'>

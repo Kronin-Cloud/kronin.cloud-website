@@ -1,4 +1,7 @@
 <div class="section-title">
+  {% if include.small_title %}
   <p class="small-title">{{ include.small_title | escape }}</p>
+  {% endif %}
+
   <h2>{{ include.title | escape }}</h2>
 </div>
