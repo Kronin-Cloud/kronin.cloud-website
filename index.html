@@ -7,7 +7,7 @@ onepage: true
 <div class='full no-padding parallax home-video-wrapper' id="top">
   <div class='fullscreen'>
     <video autoplay='autoplay' id='fullscreen-video' loop='loop'>
-      <source src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
+      <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
     </video>
     <div class='overlay'></div>
     <div class='layer'>
@@ -66,7 +66,7 @@ onepage: true
                 <a class="portfolio_close"><i class="fa fa-times" aria-hidden="true"></i></a>
                 <div class="portfolio_center">
                   <h3 class="portfolio_title">{{ prt.title }}</h3>
-                  <img class="portfolio-img" src="{{ site.baseurl }}{{ prt.img-src }}" alt="{{ prt.alt }}">
+                  <img class="portfolio-img lazy" data-src="{{ site.baseurl }}{{ prt.img-src }}" alt="{{ prt.alt }}">
                   <h3 class="portfolio_name">{{ prt.title }}</h3>
                   <div class="portfolio_hover">
                     <p class="portfolio_hover_icon">
@@ -103,7 +103,7 @@ onepage: true
       <div class="small-3 columns">
         <div class="member-avatar">
           <span class="services_icon">
-              <img src="{{ site.baseurl }}{{ serv.icon }}" class="services-icon">
+              <img data-src="{{ site.baseurl }}{{ serv.icon }}" class="services-icon lazy">
           </span>
           <h4 class="services_columns_heading">{{ serv.heading }}</h4>
           <p class="services_columns_text">{{ serv.text }}</p>
@@ -153,7 +153,7 @@ onepage: true
       {% for client in site.data.certifications.clients %}
         <div class='large-3 medium-6 small-6 columns'>
           <div class="client">
-            <a href=""><img class="clients_img" alt="" src="{{ site.baseurl }}{{ client.url  }}" /></a>
+            <a href=""><img class="clients_img lazy" alt="" data-src="{{ site.baseurl }}{{ client.url  }}" /></a>
             <h3 class="clients_name">{{ client.name }}</h3>
           </div>
 

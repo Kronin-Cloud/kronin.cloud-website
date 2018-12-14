@@ -10,8 +10,18 @@
 
 </div>
 
-<script src="/bower_components/jquery/dist/jquery.min.js" >
+
+  <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js" >
+    </script >
+<script src="{{ site.baseurl }}/bower_components/jquery.lazy.min.js" >
   </script >
+  <script >
+      $('.lazy').lazy({
+          effect: "fadeIn",
+          effectTime: 200,
+          threshold: 0
+      });
+  </script>
 <script>var ms = document.createElement("link");
 ms.rel = "stylesheet";
 ms.href = "assets/css/main.css";

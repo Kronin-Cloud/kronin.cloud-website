@@ -9,7 +9,6 @@ css:
 #  - https://fonts.googleapis.com/css?family=Raleway:400,700,300
 js:
   - /assets/javascripts/main.js
-  - /bower_components/imagesloaded/imagesloaded.pkgd.js
   - /bower_components/masonry/dist/masonry.pkgd.min.js
   - /bower_components/foundation/js/foundation.min.js
   - /assets/javascripts/jquery.sequence-min.js
@@ -17,7 +16,6 @@ js:
   - /assets/javascripts/jquery.appear.js
   - /assets/javascripts/jquery.validate.js
   - /assets/javascripts/jquery.easing.1.3.js
-  - /assets/javascripts/modernizr.foundation.js
   - /assets/javascripts/terrific-1.1.1.js
   - /assets/javascripts/jquery.url.js
   - /assets/javascripts/jquery.cookie.js
