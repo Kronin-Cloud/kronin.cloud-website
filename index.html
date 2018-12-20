@@ -5,9 +5,9 @@ onepage: true
 
 <div class='full no-padding parallax home-video-wrapper' id="top">
   <div class='fullscreen'>
-    <video  id='fullscreen-video' loop='loop' muted autoplay>
-      <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
-      <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mov" | relative_url }}' type='video/mov'>
+    <video  id='fullscreen-video' class="lazy" playsinline  loop='loop' muted autoplay   poster="{{ site.baseurl }}/assets/images/kronin-video.jpg">
+      <source  data-src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
+      <source  data-src='{{ site.baseurl }}{{ "/assets/video/stock.mov" | relative_url }}' type='video/mov'>
     </video>
 
     <div class='overlay'></div>
@@ -21,14 +21,10 @@ onepage: true
     </div>
   </div>
 </div>
-<!-- <video id="video"  src="/assets/video/stock.mp4" loop='loop' muted autoplay></video> -->
-<!-- <video-js autoplay='autoplay' id='player' loop='loop' >
-  <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mp4" | relative_url }}' type='video/mp4'>
-  <source  src='{{ site.baseurl }}{{ "/assets/video/stock.mov" | relative_url }}' type='video/mov'>
-</video-js> -->
-<!--about-->
 
-<div id="about" class="full no-overflow no-padding parallax my-about" style="background-image: url({{ "/assets/images/3000x1500.jpg" | relative_url }})">
+
+<div id="about" class="full no-overflow no-padding parallax my-about lazy-background about-lazy" >
+  <!-- <img class="lazy about-img" data-src="{{ site.baseurl }}/assets/images/3000x1500.jpg" alt=""> -->
   <div class="right-half">
     <div class="two spacing"></div>
     <div class="section-header alt white">

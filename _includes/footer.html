@@ -15,23 +15,14 @@
   </script >
 <script src="{{ site.baseurl }}/bower_components/jquery.lazy.min.js" >
   </script >
-  <script >
-      $('.lazy').lazy({
-          effect: "fadeIn",
-          effectTime: 200,
-          threshold: 0
-      });
-
-    // var player = videojs('player');
-
-
-
-  </script>
-<script>var ms = document.createElement("link");
-ms.rel = "stylesheet";
-ms.href = "/assets/css/main.css";
-document.getElementsByTagName("head")[0].appendChild(ms);
+<script >
+    $('.lazy').lazy({
+        effect: "fadeIn",
+        effectTime: 200,
+        threshold: 0
+    });
 </script>
+
 <script>
 function loadCSS(hf) {
     var ms = document.createElement("link");
@@ -49,6 +40,8 @@ function loadCSS(hf) {
         document.getElementsByTagName("head")[0].appendChild(ms);
     }
 </script>
+
+
 
 
 
@@ -87,3 +80,62 @@ function loadCSS(hf) {
     }
 }(window, document, scr);
 </script>
+<script >
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(video) {
+        if (video.isIntersecting) {
+          for (var source in video.target.children) {
+            var videoSource = video.target.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+
+          video.target.load();
+          video.target.classList.remove("lazy");
+          lazyVideoObserver.unobserve(video.target);
+        }
+      });
+    });
+
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
+</script>
+{% if site.service_worker %}
+<script async>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').then(function( registration ) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('ServiceWorker registration failed: ', error);
+    });
+  }
+</script>
+{% endif %}
