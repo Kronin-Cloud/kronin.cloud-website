@@ -41,7 +41,14 @@ function loadCSS(hf) {
     }
 </script>
 
-
+<script>
+    function loadCSS(hf) {
+        var ms = document.createElement("link");
+        ms.rel = "stylesheet";
+        ms.href = "/assets/css/font-awesome.css";
+        document.getElementsByTagName("head")[0].appendChild(ms);
+    }
+</script>
 
 
 
@@ -80,7 +87,7 @@ function loadCSS(hf) {
     }
 }(window, document, scr);
 </script>
-<script >
+<script defer>
 
 document.addEventListener("DOMContentLoaded", function() {
   var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
